@@ -1,18 +1,16 @@
 import ldap, ldap.async
 
 # Connection information
-USERNAME = 'CN=Duong Pham Tung (RAD FTEL),OU=RAD,OU=FTEL HO,OU=FTEL,DC=HO,DC=FPT,DC=VN'
+USERNAME = 'CN=CLGT,OU=RAD,OU=MY ORG HO,OU=MY_OU,DC=HO,DC=EXAMPLE,DC=VN'
 PASSWORD = ''
-SERVER   = '10.1.1.51'
-BASE     = 'DC=HO,DC=FPT,DC=VN'
-GROUP_BASE = 'DC=HO,DC=FPT,DC=VN'
+SERVER   = 'xx.xx.xx.xx'
+BASE     = 'DC=HO,DC=EXAMPLE,DC=VN'
+GROUP_BASE = 'DC=HO,DC=EXAMPLE,DC=VN'
 SCOPE    = ldap.SCOPE_SUBTREE
-SUFFIX   = '@fpt.com.vn'
+SUFFIX   = '@example.com.vn'
 ENABLE_ID  = 514
 ENABLE_ID2 = 66048 
 OUT_FILE = 'list.out'
-
-GROUP_NAME = 'NOC.Admins, VPN Groups'
 
 def get_mems_in_group (ldap_handler, group = GROUP_NAME):
 	filter = "(&(objectCategory=group)(objectClass=group)(sAMAccountName={0}))".format (group)
