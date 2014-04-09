@@ -20,16 +20,16 @@ ACC_LIST = "all_enable.log" # file cotain all enable accounts on AD server
 POSTFIX = "postfix_relay"
 
 # Constant variable for AD query
-server = '10.1.1.51' # ip/hostname of LDAP Server
-user = 'CN=Test01 (FIM HN),OU=FIM,OU=Special Account,DC=HO,DC=FPT,DC=VN' # admin account to authenticate in AD
-password = 'fimcheck' # password to authenticate
+server = 'xx.xx.xx.xx' # ip/hostname of LDAP Server
+user = 'CN=Test01 (),OU=XXX,OU=Special Account,DC=HO,DC=EXAMPLE,DC=VN' # admin account to authenticate in AD
+password = 'mysecret' # password to authenticate
 
 DIS_NUM = 514 # the number indicates the disable state of a account
 ENA_NUM = 512 # the number indicates the enable state of account
 ENA2_NUM = 66048 # fucking id
-SUFFIX = "@fpt.com.vn" # the suffix mail name of each account
-BASE = "DC=HO,DC=FPT,DC=VN" # the start base for searching
-GROUP_BASE = "OU=GROUP,DC=HO,DC=FPT,DC=VN"
+SUFFIX = "@example.com.vn" # the suffix mail name of each account
+BASE = "DC=HO,DC=EXAMPLE,DC=VN" # the start base for searching
+GROUP_BASE = "OU=GROUP,DC=HO,DC=EXAMPLE,DC=VN"
 SCOPE = ldap.SCOPE_SUBTREE # searching scope in AD
 
 ###############################################################################
